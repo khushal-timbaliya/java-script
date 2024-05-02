@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter first value" name="" id="in1">
+    <br>
+    <br>
+    <input type="text" placeholder="enter second value" name="" id="in2">
+</body>
+</html>
+<script>
+    let a =document.getElementById("in1").value
+    let b =document.getElementById("in2").value
+
+if (a > b) {
+  console.log(`${a} is greater than ${b}`);
+} else if (a < b) {
+  console.log(`${a} is less than ${b}`);
+} else {
+  console.log(`${a} is equal to ${b}`);
+}
+
+</script>

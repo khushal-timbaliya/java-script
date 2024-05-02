@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter first value" name="" id="in1">
+    <input type="text" placeholder="enter second value" name="" id="in2">
+    <h1 id="ans">your answer is :</h1>
+</body>
+</html>
+<script>
+    let a =document.getElementById("in1").value
+    let b =document.getElementById("in2").value
+
+    let c = +a * +b
+
+    document.getElementById("ans").innerHTML = c   
+</script>
+
