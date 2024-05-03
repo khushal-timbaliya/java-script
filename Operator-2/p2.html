@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">price : </label><input type="text" id="in1"><br><br>
+    <label for="">rate : </label><input type="text" id="in2"><br><br>
+    <label for="">time : </label><input type="text" id="in3"><br><br>
+
+    <h1>your answere is : <span id="ans"></span></h1>
+
+</body>
+</html>
+<script>
+    var a = document.getElementById("in1").value
+    var b = document.getElementById("in2").value
+    var c = document.getElementById("in3").value
+
+    var k = +a * +b * +c/100
+
+    document.getElementById("ans").innerHTML = k
+
+</script>

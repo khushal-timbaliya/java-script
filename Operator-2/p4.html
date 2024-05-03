@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">sanskrit : </label><input type="text" id="in1"><br><br>
+    <label for="">gujrati : </label><input type="text" id="in2"><br><br>
+    <label for="">english : </label><input type="text" id="in3"><br><br>
+
+    <h1>your answere is : <span id="ans"></span></h1>
+</body>
+</html>
+<script>
+    var a = document.getElementById("in1").value
+    var b = document.getElementById("in2").value
+    var c = document.getElementById("in3").value
+
+
+    var total = +a + +b + +c
+
+    var k = total/3
+
+    document.getElementById("ans").innerHTML = k
+</script>
