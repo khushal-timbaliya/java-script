@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>speed calcution</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-...">
+    <style>
+        body {
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="bmiForm">
+                    <div class="mb-3">
+                        <label for="distance" class="form-label">distance:</label>
+                        <input type="" class="form-control" id="distance" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="time" class="form-label">time:</label>
+                        <input type="" class="form-control" id="time" required>
+                    </div>
+                    <!-- <button class="btn btn-primary w-100" onclick="calculateTotal()">Calculate Total</button> -->
+                    <p id="speed" class="text-center mt-3 total-cost">Total Cost: <span id="ans">0.00</span></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // function calculateTotal() {
+            let distance = document.getElementById("distance").value
+            let time = document.getElementById("time").value
+
+            let speed =  distance / time
+            if(speed){
+                document.getElementById("ans").innerHTML = speed
+            }else{
+                
+            }
+
+        // }    
+    </script>
+</body>
+
+</html>

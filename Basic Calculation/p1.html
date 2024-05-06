@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Shopping Cart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<style>
+.card {
+  border: none;
+}
+
+.card-img-top {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.input-group-text {
+  background-color: #f0f0f0;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.total-cost {
+  font-weight: bold;
+}
+
+</style>
+<body>
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQchPg2_LEG9yf056DIO9ONKXUeyYPU2XvAkA&usqp=CAU" class="card-img-top" alt="Product Image">
+          <div class="card-body">
+            <h5 class="card-title">rolex wathch</h5>
+            <p class="card-text">$25.00</p>
+            <div class="input-group mb-3">
+              <span class="input-group-text">Quantity</span>
+              <input type="number" id="quantity" class="form-control" min="1" value="1">
+            </div>
+            <button class="btn btn-primary w-100" onclick="calculateTotal()">Calculate Total</button>
+            <p id="totalCost" class="text-center mt-3 total-cost">Total Cost: <span id="ans">$0.00</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+<script>
+function calculateTotal() {
+  var quantity = document.getElementById("quantity").value
+  var price = 25;
+  var totalCost = price * quantity;
+  document.getElementById("ans").innerHTML = totalCost
+}
+
+</script>
