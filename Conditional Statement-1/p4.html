@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter number :</label><input id="number" type="text">
+    <h1 id="ans"></h1>
+</body>
+</html>
+<script>
+    let number = document.getElementById("number").value
+    if(number === ""){
+        document.getElementById("ans").innerHTML = "invalid number"
+    }else{  
+            if (number > 0) {
+                document.getElementById("ans").innerHTML = "Positive.";
+            } else if (number < 0) {
+                document.getElementById("ans").innerHTML = "Negative.";
+            } else {
+                document.getElementById("ans").innerHTML = "Zero.";
+            }
+    }
+</script>

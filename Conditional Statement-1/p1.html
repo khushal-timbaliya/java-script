@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter Temperature :</label><input id="temperature" type="text">
+    <h1 id="ans"></h1>
+</body>
+</html>
+<script>
+    let temperature = document.getElementById("temperature").value
+    if(temperature === ""){
+        document.getElementById("ans").innerHTML = "invalid temperature"
+    }else{
+        if (temperature < 0) {
+            document.getElementById("ans").innerHTML = "It's freezing cold!"
+        } else if (temperature >= 0 && temperature <= 10) {
+            document.getElementById("ans").innerHTML = "It's chilly.";
+        } else if (temperature >= 11 && temperature <= 20) {
+            document.getElementById("ans").innerHTML = "It's cool.";
+        } else {
+            document.getElementById("ans").innerHTML = "It's warm!";
+        }
+    }
+</script>
