@@ -1,0 +1,45 @@
+<!-- 1. Develop a program that calculates the electricity bill based on units consumed. The rates are:
+First 100 units: $1 per unit
+Next 100 units: $2 per unit
+Above 200 units: $3 per unit -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <label for="">Enter unit:</label>
+    <input type="text" id="un">
+
+    <h1 id="ans"></h1>
+</body>
+</html>
+
+<script>
+
+    let a=document.getElementById("un").value
+
+    let amt;
+
+    if(a <= 100)
+    {
+        amt = a * 1;
+    }
+    else if(a <= 200)
+    {
+        amt = 100 + ((a-100) * 2);
+    }
+    else
+    {
+        amt = 200 + ((a-200) * 3);
+    }
+    
+
+    document.getElementById("ans").innerHTML= amt
+</script>

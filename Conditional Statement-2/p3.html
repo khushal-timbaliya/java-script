@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>biggest Number Calculator</title>
+</head>
+<body>
+
+<h2>biggest Number Calculator</h2>
+<label for="num1">Number 1:</label>
+<input type="number" id="num1" step="any"><br><br>
+
+<label for="num2">Number 2:</label>
+<input type="number" id="num2" step="any"><br><br>
+
+<label for="num3">Number 3:</label>
+<input type="number" id="num3" step="any"><br><br>
+
+<label for="num4">Number 4:</label>
+<input type="number" id="num4" step="any"><br><br>
+
+<label for="num4">Number 5:</label>
+<input type="number" id="num5" step="any"><br><br>
+
+<button onclick="kt()">Calculate biggest</button>
+<p id="biggestNumber"></p>
+
+<script>
+function kt() {
+    const num1 = parseFloat(document.getElementById("num1").value);
+    const num2 = parseFloat(document.getElementById("num2").value);
+    const num3 = parseFloat(document.getElementById("num3").value);
+    const num4 = parseFloat(document.getElementById("num4").value);
+    const num5 = parseFloat(document.getElementById("num5").value);
+
+    let biggest = num1;
+
+    if (num2 > biggest) {
+        biggest = num2;
+    }
+    if (num3 > biggest) {
+        biggest = num3;
+    }
+    if (num4 > biggest) {
+        biggest = num4;
+    }
+    if (num5 > biggest) {
+        biggest = num5;
+    }
+
+    const biggestNumberElement = document.getElementById("biggestNumber");
+    biggestNumberElement.textContent = "The biggest number is: " + biggest;
+}
+</script>
+
+</body>
+</html>
