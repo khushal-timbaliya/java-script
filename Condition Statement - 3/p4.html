@@ -1,0 +1,51 @@
+<!-- 4.Use Ldder if - else
+ 0-10 (Child)
+11-20(Teen)
+21-30(Adult) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    ENTER AGE
+    <input type="text" id="n">
+
+    <h1 id="ans"></h1>
+
+</body>
+</html>
+
+<script>
+
+let a=document.getElementById("n").value
+
+if(a==="")
+{
+    document.getElementById("ans").innerHTML = "ENTER THE AGE"
+}
+
+else
+{
+if(a>=0 && a<=10)
+{
+    document.getElementById("ans").innerHTML = "CHILDREN"
+}
+
+else if(a>=11 && a<=20)
+{
+    document.getElementById("ans").innerHTML = "TEEN" 
+}
+
+else if(a>=21 && a<=30)
+{
+    document.getElementById("ans").innerHTML = "ADULT" 
+}
+}
+
+</script>
