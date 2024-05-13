@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Gujarati Thali</h1>
+    <input type="text" id="in1">
+
+    <h1>Punjabi Thali</h1>
+    <input type="text" id="in2">
+
+    <h1>South Indian</h1>
+    <input type="text" id="in3">
+
+    <h1 id="ans"></h1>
+
+    <h1 id="ans1"></h1>
+
+</body>
+</html>
+
+<script>
+
+    let a = document.getElementById("in1").value
+    let b = document.getElementById("in2").value
+    let c = document.getElementById("in3").value
+
+    let d
+    d = +a + +b + +c 
+
+    document.getElementById("ans").innerHTML=d
+
+    let e 
+    e = +d + d *0.18
+
+    document.getElementById("ans1").innerHTML=e
+
+
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+    
+    
+    <h1>Enter Principal</h1>
+    <input type="text" id="in1">
+
+    <h1>Enter rate of interest</h1>
+    <input type="text" id="in2">
+    
+    <h1>Enter time</h1>
+    <input type="text" id="in3">
+
+    <h1 id="ans"></h1>
+</body>
+</html>
+
+<script>
+    
+    let a= document.getElementById("in1").value
+    let b= document.getElementById("in2").value
+    let c= document.getElementById("in3").value
+
+
+    let int = (a*b*c)/100
+
+    document.getElementById("ans").innerHTML = int
+</script>
