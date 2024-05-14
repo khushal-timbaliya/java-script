@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">below 12 year</label><input id="in1" type="text"><br>
+    <label for="">12 to 18 year</label><input id="in2" type="text"><br>
+    <label for="">18 tp 60 year</label><input id="in3" type="text"><br>
+    <label for="">over 60 year</label> <input id="in4" type="text"><br>
+
+    <h1 id="ans"></h1>
+</body>
+</html> 
+<script>
+    let a = document.getElementById("in1").value
+    let b = document.getElementById("in2").value
+    let c = document.getElementById("in3").value
+    let d = document.getElementById("in4").value
+
+    let k = +a*5 + +b*10 + +c*20 + +d*15
+
+    document.getElementById("ans").innerHTML = k
+</script>

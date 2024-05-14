@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">enyer total amount : </label><input id="in1" type="text">
+
+    <br>
+
+    <label for="">discount :</label>
+    <span id="ans1"></span><br>
+    <label for="">total amount :</label>
+    <span id="ans2"></span>
+</body>
+
+</html>
+<script>
+    var k = document.getElementById("in1").value
+
+    if (k === "") {
+        document.getElementById("ans1").innerHTML = "enter valid value"
+    } else {
+        if (k >= 0 && k < 50) {
+            var a = (k * 0) / 100
+            document.getElementById("ans1").innerHTML = "no discount"
+            document.getElementById("ans2").innerHTML = k - a
+        }
+        else if (a >= 50 && a < 100) {
+            var a = (k * 10) / 100
+            document.getElementById("ans1").innerHTML = a
+            document.getElementById("ans2").innerHTML = k - a
+        }
+        else{
+            var a = (k * 20) / 100
+            document.getElementById("ans1").innerHTML = a
+            document.getElementById("ans2").innerHTML = k - a
+        }
+    }
+
+</script>
