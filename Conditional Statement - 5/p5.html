@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <label for="" >----------MENU----------</label>
+<br><br>
+    <select name="" id="option">
+        <option value="Java Chip Frappuccino">Java Chip Frappuccino</option>
+        <option value="Caffe Americano">Caffe Americano</option>
+        <option value="Cold coffee">Cold coffee</option>
+        <option value="Double Chocolate Chip Frappuccino">Double Chocolate Chip Frappuccino</option>
+    </select>
+    <br><br>
+    <h1 id="ans"></h1>
+</center>
+
+</body>
+</html>
+
+<script>
+
+    let b = document.getElementById("option").value
+
+
+    if(b === "")
+    {
+        document.getElementById("ans").innerHTML = ""
+    }
+    else{
+
+        switch(b)
+        {
+            case "Java Chip Frappuccino" :
+            document.getElementById("ans").innerHTML =  "₹ 383.25"   
+            console.log("₹ 383.25");
+            break
+            case "Caffe Americano" : 
+            document.getElementById("ans").innerHTML ="₹ 278.25"    
+
+            console.log("₹ 278.25");
+            break
+            case "Cold coffee" : 
+            document.getElementById("ans").innerHTML =  "₹ 372.75"  
+
+            console.log("₹ 372.75");
+            break
+            case "Double Chocolate Chip Frappuccino" : 
+            document.getElementById("ans").innerHTML =  "₹ 414.75"  
+
+            console.log("₹ 414.75");
+            break
+
+            default : console.log("Enter Valid Option");
+        }
+    }
+</script>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <label for="" >Enter First Value :</label>
+    <input type="text" id="input1"> 
+<br><br>
+    <select name="" id="option">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value=""></option>
+        <option value="/">/</option>
+    </select>
+    <br><br>
+    <label for="" >Enter Second Value :</label>
+    <input type="text" id="input3"> 
+    <br><br>
+    <h1 id="ans"></h1>
+</center>
+
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("input1").value
+
+    let b = document.getElementById("option").value
+
+    let c = document.getElementById("input3").value
+
+    if(a === "" && b === "" && c === "")
+    {
+        document.getElementById("ans").innerHTML = ""
+    }
+    else{
+
+        switch(b)
+        {
+            case "+" :
+            document.getElementById("ans").innerHTML = +a + +c    
+            console.log(+a + +c);
+            break
+            case "-" : 
+            document.getElementById("ans").innerHTML = +a - +c    
+
+            console.log(+a - +c);
+            break
+            case "*" : 
+            document.getElementById("ans").innerHTML = +a * +c    
+
+            console.log(+a * +c);
+            break
+            case "/" : 
+            document.getElementById("ans").innerHTML = +a / +c    
+
+            console.log(+a / +c);
+            break
+
+            default : console.log("Enter Valid Option");
+        }
+    }
+</script>

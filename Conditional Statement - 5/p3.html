@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Enter Traffic Light Color :</label>
+    <input type="text" id="input1">
+
+    <h1 id="ans"></h1>
+</body>
+
+</html>
+
+<script>
+    let a = document.getElementById("input1").value
+
+    if (a === "") {
+        console.log("")
+    }
+    else {
+        switch (a) {
+            case "red":
+                document.getElementById("ans").innerHTML = "Stop!"
+                console.log("Stop!");
+                break
+
+                case "Yellow":
+                document.getElementById("ans").innerHTML = "Slow down!"
+                console.log("Slow down!");
+                break
+
+                case "Green":
+                document.getElementById("ans").innerHTML = "Go"
+                console.log("Go");
+                break
+
+                default : 
+                document.getElementById("ans").innerHTML = "Enter Valid Value"
+                console.log("Enter Valid Value");
+
+        }
+    }
+</script>
