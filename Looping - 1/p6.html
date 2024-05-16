@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">enter string :</label><input id="str" type="text">
+    <h1 id="ans"></h1>
+</body>
+
+</html>
+
+<script>
+    let str = document.getElementById("str").value
+
+    if (str === "") {
+        document.getElementById("ans").innerHTML = ""
+    } else {
+        for (let i = 0; i < 10; i++) {
+            document.getElementById("ans").innerHTML += str + "<br>"
+        }
+    }
+
+</script>

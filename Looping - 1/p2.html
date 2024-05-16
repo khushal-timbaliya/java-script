@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">enter string :</label><input id="str" type="text">
+    <h1 id="ans"></h1>
+</body>
+
+</html>
+<script>
+    var str = document.getElementById("str").value
+    if (str === "") {
+        document.getElementById("ans").innerHTML = ""
+    } else {
+        var vovel = 0
+        for (let i = 0; i <= str.length - 1; i++) {
+            if (str[i] === 'A' || str[i] === 'a' || str[i] === 'E' || str[i] === 'e' || str[i] === 'I' || str[i] === 'i' || str[i] === 'O' || str[i] === 'o' || str[i] === 'U' || str[i] === 'u') {
+                vovel += 1
+            }
+        }
+
+    }
+
+    document.getElementById("ans").innerHTML = vovel
+</script>

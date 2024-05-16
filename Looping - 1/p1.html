@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">enter string :</label><input id="str" type="text">
+    <h1 id="ans"></h1>
+</body>
+
+</html>
+
+<script>
+    let str = document.getElementById("str").value
+
+    let res1 = ""
+    let res2 = ""
+    if (str === "") {
+        document.getElementById("ans").innerHTML = ""
+    } else {
+        for (let i = 0; i <= str.length - 1; i++) {
+            res1 += str[i]
+        }
+        for (let i = str.length - 1; i >= 0; i--) {
+            res2 += str[i]
+        }
+        if (res1 === res2) {
+            document.getElementById("ans").innerHTML = "palindrom !"
+        } else {
+            document.getElementById("ans").innerHTML = "not a palindrom !"
+        }
+    }
+
+</script>
