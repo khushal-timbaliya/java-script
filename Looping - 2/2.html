@@ -1,0 +1,36 @@
+<!-- Q2. Find factorial of a number.(while) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter factorial Number :</label>
+    <input type="text" id="in1">
+
+    <h3 id="ans"></h3>
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("in1").value
+
+    let b = 1 , i = 1
+    if( b === "")
+    {
+        document.getElementById("ans").innerHTML = ""
+
+    }
+    else{
+    do{
+        b *= i
+        i++
+
+    }while(i <= a)
+
+    document.getElementById("ans").innerHTML = b
+}
+</script>
