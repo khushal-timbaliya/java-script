@@ -1,0 +1,38 @@
+<!-- Q5.Reverse the digits.(Arrow Function) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Enter First Number :</label>
+    <input type="text" id="in1">
+
+    <h1 id="ans"></h1>
+
+</body>
+
+</html>
+
+<script>
+    let a = document.getElementById("in1").value
+    let rev = 0, rem
+
+    reverse = () => {
+
+        while (a != 0) {
+            rem = a % 10
+            rev = rev * 10 + rem
+            a = Math.floor(a / 10)
+        }
+
+        document.getElementById("ans").innerHTML = rev
+
+    }
+    reverse()
+</script>

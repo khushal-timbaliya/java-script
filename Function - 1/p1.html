@@ -1,0 +1,36 @@
+<!-- Q1. Find product of digits using function.(Function Expression) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Enter First Number :</label>
+    <input type="text" id="in1">
+    <br><br>
+    <label for="">Enter Second Number :</label>
+    <input type="text" id="in2">
+
+    <h1 id="ans"></h1>
+</body>
+
+</html>
+
+<script>
+    let a = document.getElementById("in1").value
+
+    let b = document.getElementById("in2").value
+
+    let c = function () {
+        let d = a * b
+        document.getElementById("ans").innerHTML = d
+
+    }
+
+    c() 
+</script>

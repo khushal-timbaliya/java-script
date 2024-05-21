@@ -1,0 +1,28 @@
+<!-- Q4. Find double of a number using function.(Arrow Function) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter First Number :</label>
+    <input type="text" id="in1">
+
+    <h1 id="ans"></h1>
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("in1").value
+
+    double = () => {
+        let b = a*2
+
+        document.getElementById("ans").innerHTML = b
+    }
+
+    double()
+</script>

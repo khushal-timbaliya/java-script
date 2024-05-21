@@ -1,0 +1,31 @@
+<!-- Q3. Find factorial of a number using function.(Arrow Function) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter First Number :</label>
+    <input type="text" id="in1">
+
+    <h1 id="ans"></h1>
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("in1").value
+
+    let b = 1;
+    factorial = () => {
+        for (let i = 1; i <=a ; i++)
+        {
+            b *= i;
+            
+        }
+        document.getElementById("ans").innerHTML = b
+    }
+
+    factorial()
+</script>

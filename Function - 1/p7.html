@@ -1,0 +1,38 @@
+<!-- Q7. Take a variable darkMode if true print "ON" or just print "OFF" -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Select Option :</label>
+
+    <select name="" id="in1">
+        <option value="true">true</option>
+        <option value="false">false</option>
+    </select>
+
+    <h1 id="ans"></h1>
+
+</body>
+
+</html>
+
+<script>
+    var a = document.getElementById("in1").value
+
+     light = () => {
+        if (a === "true") {
+            document.getElementById("ans").innerHTML = "Darkmode is On.."
+        }
+        else {
+            document.getElementById("ans").innerHTML = "Darkmode is Off.."
+        }
+    }
+    light()
+</script>
