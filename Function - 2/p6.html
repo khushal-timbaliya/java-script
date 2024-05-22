@@ -1,0 +1,52 @@
+<!-- 6. Design a function that finds string has an "A" in starting or end -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter Name :</label>
+    <input type="text" id="in1">
+
+    <button onclick="btn()">Click Here</button>
+
+    <h1 id="ans"></h1>
+
+</body>
+</html>
+
+<script>
+        function str(str) {
+            if(str[0] === 'a' || str[0] === 'A' )
+            {
+                if(str[str.length-1] === 'a' || str[str.length-1] === 'A')
+                {
+                    return "Got an A in BothSide";
+
+                }
+                return "Got an A in satrting";
+                
+            }
+            else if(str[str.length-1] === 'a' || str[str.length-1] === 'A')
+            {
+                return "Got an A in Ending";
+
+            }
+            else{
+                return "Cant't Find A"
+            }
+    }
+
+    function btn(){
+        var in1 =  document.getElementById("in1").value
+
+        var parameters = str(in1)
+
+        document.getElementById("ans").innerHTML =  parameters
+    }
+
+
+</script>
