@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">ENTER THE FIRST NUMBERS</label>
+    <input type="text" id="in1">
+
+    <label for="">ENTER THE SECOND NUMBERS</label>
+    <input type="text" id="in2">
+
+    <label for="">ENTER THE THIRD NUMBERS</label>
+    <input type="text" id="in3">
+
+    <h3 id="ans"></h3>
+</body>
+</html>
+
+<script>
+    function first(){
+        let a = document.getElementById("in1").value
+
+
+        function second()
+        {
+            let b = document.getElementById("in2").value
+
+            function third()
+            {
+                let c = document.getElementById("in3").value
+
+                document.getElementById("ans").innerHTML += +a + +b + +c
+            }
+
+            third()
+        }
+
+        second()
+    }
+
+    first()
+</script>

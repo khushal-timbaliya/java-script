@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiplier</title>
+</head>
+<body>
+
+    <label for="">ENTER THE FACTORE</label>
+    <input type="text" id="in1">
+
+    <label for="">ENTER THE NUMBERS</label>
+    <input type="text" id="in2">
+
+    <button onclick="btn()">CLICK</button>
+
+    <h3 id="ans"></h3>
+</body>
+</html>
+
+<script>
+    function btn()
+    {
+        var a = document.getElementById("in1").value
+
+        var b = document.getElementById("in2").value
+
+        var sum = first(+a)(+b)
+
+        document.getElementById("ans").innerHTML = sum
+    }
+
+    function first(a)
+    {
+        return function second(b)
+        {
+            return a * b
+        }
+    }
+</script>

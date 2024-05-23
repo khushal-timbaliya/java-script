@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Enter name</h1>
+    <input type="text" id="in1">
+
+    <h1 id="ans"></h1>
+
+</body>
+</html>
+
+<script>
+
+    let name = document.getElementById("in1").value
+    let res1 = ""
+    let res2 = ""
+
+    function pall(name)
+    {
+        for(let i =0; i<= name.length - 1; i++)
+        {
+            res1 += name[i]
+        }
+
+        for(let i = name.length-1; i>=0; i--)
+        {
+            res2 += name[i]
+        }
+
+        
+    function pall2()
+    {
+        if(name === "")
+        {
+        document.getElementById("ans").innerHTML = ""
+        }
+        else
+        {
+            if(res1 === res2){
+            document.getElementById("ans").innerHTML = "Palindrome"
+        }
+        else
+        {
+            document.getElementById("ans").innerHTML = "Not Palindrome"
+        }
+        }
+    }pall2(res1,res2)
+    }pall(name)
+
+</script>
