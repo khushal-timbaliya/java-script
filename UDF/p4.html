@@ -1,0 +1,48 @@
+<!-- 4. Write a function isPalindrome(num) that checks if a given number num is a palindrome. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Enter Digit :</h1>
+    <input type="text" id="in1">
+
+    <h1 id="ans"></h1>
+
+</body>
+</html>
+
+<script>
+
+    let num = document.getElementById("in1").value
+    let res1 = ""
+    let res2 = ""
+
+    function pall(num){
+        for(let i =0; i<= num.length - 1; i++){
+            res1 += num[i]
+        }
+        for(let i = num.length-1; i>=0; i--){
+            res2 += num[i]
+        }
+
+        
+    function pall2(){
+        if(num === ""){
+        document.getElementById("ans").innerHTML = ""
+        }else{
+            if(res1 === res2){
+            document.getElementById("ans").innerHTML = "Palindrome"
+        }else{
+            document.getElementById("ans").innerHTML = "Not Palindrome"
+        }
+        }
+    }pall2(res1,res2)
+    }pall(num)
+
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Enter Principal :</label>
+    <input type="text" id="in1">
+    <br><br>
+    <label for="">Enter Rate :</label>
+    <input type="text" id="in2">
+    <br><br>
+    <label for="">Enter Time :</label>
+    <input type="text" id="in3">
+
+    <button onclick="btn()">Click Here</button>
+    <h1 id="ans"></h1>
+</body>
+
+</html>
+
+<script>
+    function btn() {
+        let a = document.getElementById("in1").value
+        let b = document.getElementById("in2").value
+        let c = document.getElementById("in3").value
+
+        var int = si(a,b,c)
+
+        document.getElementById("ans").innerHTML = "Total Interest ₹" +  int
+    }
+
+    function si(a,b,c) {
+        return (a * b * c)/100
+    }
+</script>
