@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="ans"></h1>
+</body>
+</html>
+<script>
+    let arr = ("khushal timbaliya")
+    let vowel=0
+    for(let i=0 ;i<=arr.length-1;i++){
+        if(arr.charAt(i)=="a" || arr.charAt(i)=="e" || arr.charAt(i)=="i" ||arr.charAt(i)=="o" || arr.charAt(i)=="u" || arr.charAt(i)=="A" || arr.charAt(i)=="E" || arr.charAt(i)=="I" || arr.charAt(i)=="o" || arr.charAt(i)=="U"){
+            vowel+=1
+            console.log(arr[i])
+
+        }
+    }
+    document.getElementById("ans").innerHTML = arr
+    document.getElementById("ans").innerHTML = vowel
+
+</script>
