@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    const even = num.filter(num => num % 2 === 0);
+
+    const sum = even.reduce((acc, num) => acc + num, 0);
+
+    console.log("even numbers:", even);
+    console.log("Sum of all even numbers:", sum);
+
+</script>

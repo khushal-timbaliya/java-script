@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    function processArray(strings) {
+        const longStrings = strings.filter(str => str.length >= 5);
+
+        const uppercasedStrings = longStrings.map(str => str.toUpperCase());
+
+        return uppercasedStrings;
+    }
+
+    const strings = ["apple", "banana", "kiwi", "cherry", "pear", "plum"];
+    const result = processArray(strings);
+
+    console.log("Processed strings:", result);
+
+</script>
