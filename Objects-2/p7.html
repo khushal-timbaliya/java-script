@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let Categorize = [
+        { text: "chainshow man", author: "Tsugu", category: "education" },
+        {
+            text: "jujutsu kaisen",
+            author: "Gege Akutami",
+            category: "anime"
+        },
+
+        {
+            text: "shinchan",
+            author: "Yoshito Usui",
+            category: "cartoon"
+        },
+
+        {
+            text: "death_note",
+            author: "Tsugumi Ohba",
+            category: "education"
+        }
+
+    ]
+
+    let ans = Categorize.filter((el) => {
+        return el.category === "education"
+    })
+    console.log(ans)
+
+</script>
