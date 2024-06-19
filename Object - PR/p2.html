@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+const quotes = [
+    { text: "aaaaa", author: "Steve Jobs", category: "inspiration" },
+    { text: "bbbbb", author: "Nelson Mandela", category: "education" },
+    { text: "ccccc", author: "Malcolm Forbes", category: "education" },
+    { text: "ddddd", author: "John Lennon", category: "life" }
+];
+
+function kt(quotes) {
+    const newArray = [];
+    
+    quotes.forEach(quote => {
+        if (quote.category === "education") {
+            newArray.push(quote);
+        }
+    });
+
+    console.log(newArray);
+}
+
+kt(quotes);
+
+</script>

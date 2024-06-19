@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+
+
+const books = [
+    { title: 'Book A', author: 'Author A', price: 50, quantity: 3 },
+    { title: 'Book B', author: 'Author B', price: 30, quantity: 0 },
+    { title: 'Book C', author: 'Author C', price: 60, quantity: 5 },
+    { title: 'Book D', author: 'Author D', price: 70, quantity: 2 },
+    { title: 'Book E', author: 'Author E', price: 20, quantity: 10 }
+];
+
+
+function kt(books) {
+    const newArray = [];
+    books.forEach(el => {
+        if (el.price <= 60 && el.quantity > 0) {
+            newArray.push(el);
+        }
+    })
+    console.log(newArray);
+
+}
+kt(books);
+</script>
