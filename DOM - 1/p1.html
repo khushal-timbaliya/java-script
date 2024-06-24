@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>khushal timbaliya</h1>
+    <h3>khushal timbaliya</h3>
+    <h5>khushal timbaliya</h5>
+    <button onclick="kt()">color</button>
+    
+    <h4 class="green">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
+    <h4 class="green">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
+    <br><br>
+    <h4 class="blue">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
+    <h4 class="blue">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
+    <br><br>
+    <h4 class="red">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
+    <h4 class="red">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
+    
+    <button onclick="kt1()">green</button>
+    <button onclick="kt2()">blue</button>
+    <button onclick="kt3()">red</button>
+</body>
+</html>
+<script>
+    function kt(){
+        document.querySelector("h1").style.color = "red"
+        document.querySelector("h3").style.color = "green"
+        document.querySelector("h5").style.color = "blue"
+    }
+
+    function kt1(){
+        let green = document.getElementsByClassName("green")
+        for(let i=0; i<green.length; i++)
+        {
+            green[i].style.color = "green"
+        }
+    }
+
+    function kt2(){
+        let blue = document.getElementsByClassName("blue")
+        for(let i = 0; i<blue.length; i++)
+        {
+            blue[i].style.color = "blue"
+        }
+    }
+
+    function kt3(){
+        let red = document.getElementsByClassName("red")
+        for(let i=0; i<red.length; i++)
+        {
+            red[i].style.color = "red"
+        }
+    }
+</script>

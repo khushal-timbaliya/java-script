@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="firstname">Your FirstName</h1>
+   
+    <div id="lastname">Your LastName</div>
+      
+     <p id="fullname">Your First&LastName</p>
+     
+    <hr/>
+       
+    <button onclick="setFirstName()">FIRSTNAME</button>
+    
+    <button onclick="setLastName()">LASTNAME</button>
+     
+    <button onclick="setFullName()">FIRSTNAME NAME</button> 
+    
+    <button onclick="resetDefaults()">RESET DEFAULTS</button>    
+</body>
+</html>
+
+<script>
+    function setFirstName (){
+        document.querySelector("#firstname").textContent = "KARTIK"
+    }
+
+    function setLastName (){
+        document.querySelector("#lastname").textContent = "CHAVDA"
+    }
+
+    function setFullName (){
+
+        let firstname = document.querySelector("#firstname").textContent
+        let lastname = document.querySelector("#lastname").textContent
+
+        document.getElementById("fullname").textContent = firstname + " " + lastname
+    }
+
+    function resetDefaults (){
+        document.querySelector("#firstname").textContent = ""
+        document.querySelector("#lastname").textContent = ""
+        document.querySelector("#fullname").textContent = ""
+    }
+</script>
