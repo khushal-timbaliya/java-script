@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" id="signup">
+        <label for="">Name</label>
+        <input type="text" id="name">
+        <br><br><br>
+        <label for="">Phone Number</label>
+        <input type="text" id="phn">
+        <br><br><br>
+        <label for="">Email</label>
+        <input type="text" id="email">
+        <br><br><br>
+        <label for="">Password</label>
+        <input type="text" id="pw">
+        <br><br><br>
+        <label for="">Confirm Password</label>
+        <input type="text" id="cpw">
+        <br><br><br>
+        <input type="submit">
+        <br><br><br><br><br>
+        <span id="err"></span>
+    </form>
+</body>
+
+</html>
+<script>
+    document.getElementById("signup").onsubmit = function (event) {
+        document.getElementById("err").innerHTML = ""
+        event.preventDefault()
+        try {
+            let name = document.getElementById("name").value
+            let password = document.getElementById("pw").value
+            let cpw = document.getElementById("cpw").value
+            let email = document.getElementById("email").value
+
+            if (name === "" || /\d/.test(name)) {
+                throw new Error("please enter valid name")
+            }
+            if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(password)) {
+                throw new Error("Minimum 8 characters required")
+            }
+            if (password !== cpw) {
+                throw new Error("dobi hai kya !")
+            }
+            if (email === "" || !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)){
+                throw new Error("enter valid email")
+            }
+        }
+        catch (err) {
+            document.getElementById("err").style.color = "red"
+            document.getElementById("err").innerHTML = err.message
+        }
+    }
+</script>
