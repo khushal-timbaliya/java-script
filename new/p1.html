@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form action="" id="signup">
+        <label for="">Username</label>
+        <input type="text" id="name">
+        <br><br><br>
+        <label for="">Email</label>
+        <input type="text" id="email">
+        <br><br><br>
+        <label for="">password</label>
+        <input type="text" id="pw">
+        <br><br><br>
+        <input type="submit">
+        <span id="err"></span>
+    </form>
+</body>
+</html>
+<script>
+    $(document).ready(function(){
+        $("#signup").submit(function(event){
+            event.preventDefault()
+            $("#err").text("")
+            let name = $("#name").val()
+            if(name === ""){
+                $("#err").text("plese enter email !")
+            }
+            let password = $("#pw").val()
+            let pwRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/
+            if(password === ""){
+                $("#err").text("plese Enter password !")
+            }else if(!pwRegex.test(password)){
+                $("#err").text("plese enter Enter password !")
+            }
+        })
+    })
+</script>
