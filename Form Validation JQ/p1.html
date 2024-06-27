@@ -3,41 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <form action="" id="signup">
-        <label for="">Username</label>
-        <input type="text" id="name">
-        <br><br><br>
-        <label for="">Email</label>
-        <input type="text" id="email">
-        <br><br><br>
-        <label for="">password</label>
-        <input type="text" id="pw">
-        <br><br><br>
-        <input type="submit">
-        <span id="err"></span>
-    </form>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="singup">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="name" name="firstName" >
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="name" name="lastName">
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="email">Student E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="ex: myname@example.com">
+
+            <label for="studentId">Password:</label>
+            <input type="text" id="pass" name="studentId" >
+
+            <label for="classes">List of Classes:</label>
+            <select id="classes" name="classes">
+                <option value="class1">Class 1</option>
+                <option value="class2">Class 2</option>
+                <option value="class3">Class 3</option>
+            </select>
+
+            <button type="submit">Submit</button>
+            <span id="err"></span>
+        </form>
+    </div>
 </body>
 </html>
 <script>
     $(document).ready(function(){
-        $("#signup").submit(function(event){
+        $("#singup").submit(function(){
             event.preventDefault()
             $("#err").text("")
             let name = $("#name").val()
-            if(name === ""){
-                $("#err").text("plese enter email !")
+
+            if(name === "")
+            {
+                $("#err").text("Please enter name!")
             }
-            let password = $("#pw").val()
-            let pwRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/
-            if(password === ""){
-                $("#err").text("plese Enter password !")
-            }else if(!pwRegex.test(password)){
-                $("#err").text("plese enter Enter password !")
+            let mail = $("#email").val()
+            let pass = $("#pass").val()
+            let regex = /^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[a-zA-Z]).{8,}$/
+
+            if(pass === "")
+            {
+                $("#err").text("Please enter password!")
             }
+            else if(!regex.test(pass))
+            {
+                $("#err").text("Please enter strong pass!")
+            }
+
+            if(mail === "")
+            {
+                $("#err").text("Please enter email!")
+            }
+
         })
     })
 </script>
