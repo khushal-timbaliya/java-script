@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #9d9696;">
+
+    <div class="box">
+        <div class="registration">
+
+            <div class="box1">
+                <div class="txt"
+                    style="padding-top: 30px; display: flex; justify-content: end; align-items: center; padding-right: 10px;">
+                    <a href="registration.html" style="text-decoration: none; color: black;">Sign Up</a>
+                </div>
+
+
+                <center>
+                    <h1 style="padding-top: 50px;">Login</h1>
+                </center>
+                <br><br>
+               <form action="" id="login">
+                <div class="txt" style="width: 80%; margin-left: 10%;">
+                    <label for="">Username</label><br>
+                    <input type="text" style="width: 100%; height: 35px; border-radius: 5px; margin-top: 10px;" id="name">
+    
+                    <br><br>
+                    <label for="">Password</label><br>
+                    <input type="text" style="width: 100%; height: 35px; border-radius: 5px; margin-top: 10px;" id="password">
+                    <span id="error"></span>
+    <br><br>
+                    <button style="height: 40px; width: 100%; background-color: #feb843; border: 0px; border-radius: 5px;">Login</button>
+    
+                </div>
+               </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    document.getElementById("login").onsubmit = function (event){
+        document.getElementById("error").style.color = "green"
+        document.getElementById("error").innerHTML = "Login Successfully..."
+        
+        event.preventDefault()
+        let name = document.getElementById("name").value 
+        let password = document.getElementById("password").value 
+
+
+        try{
+
+            if(name === ""){
+                throw new Error("Please enter name")
+            }
+
+            if(password === ""){
+                throw new Error("Please enter password")
+            }
+
+        }
+        catch(error){
+            document.getElementById("error").style.color = "red"
+            document.getElementById("error").innerHTML = error.message
+        }
+     
+    }
+
+</script>
