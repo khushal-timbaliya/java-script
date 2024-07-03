@@ -1,0 +1,62 @@
+<!-- 2. *Food Types and Cooking*:
+   Define a base class Food with a method cook(). Create subclasses like Pizza, Sushi, and Burger that extend Food and override cook() to depict the cooking process for each food type. Instantiate these food objects and call cook() to display how each type is prepared. -->
+
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Types and Cooking</title>
+</head>
+<body>
+    <script>
+        class Food {
+            constructor(name) {
+                this.name = name;
+            }
+
+            cook() {
+                console.log("Cooking" + this.name);
+            }
+        }
+
+        class Pizza extends Food {
+            constructor() {
+                super('Pizza');
+            }
+
+            cook() {
+                console.log('Preparing pizza dough, adding toppings, and baking in the oven.');
+            }
+        }
+
+        class Sushi extends Food {
+            constructor() {
+                super('Sushi');
+            }
+
+            cook() {
+                console.log('Slicing fresh fish, rolling with rice and seaweed, and serving with soy sauce.');
+            }
+        }
+
+        class Burger extends Food {
+            constructor() {
+                super('Burger');
+            }
+
+            cook() {
+                console.log('Grilling beef patty, assembling with lettuce, cheese, and bun.');
+            }
+        }
+
+        const pizza = new Pizza();
+        const sushi = new Sushi();
+        const burger = new Burger();
+
+        pizza.cook();
+        sushi.cook();
+        burger.cook();
+    </script>
+</body>
+</html>
