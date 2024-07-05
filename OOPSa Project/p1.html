@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let arr  = [1,2,3,4,5,6,7,8]
+    Array.prototype.khushal = function(el){
+        let newArr = []
+        for (let i = 0; i < this.length; i++) {
+            newArr.push(el(this[i]))
+        }
+        return newArr
+    }
+    let ans = arr.khushal((el)=>{
+        return el * 2
+    })
+    console.log(ans)
+
+
+    let arra = [1,2,3,4,5,6,7,8]
+    Array.prototype.khushal = function(el){
+        let newArr = []
+        for (let i = 0; i < this.length; i++) {
+            if (el(this[i])) {
+                newArr.push((this[i])) 
+            }
+            
+            
+        }
+        return newArr
+    }
+    let ans1 = arra.khushal((el)=>{
+        return el %2 == 0
+    })
+    console.log(ans1)
+</script>

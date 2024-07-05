@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+
+<script>
+  class Animal{
+    makeSound(){
+      throw new Error("makeSound() is not implemented in the animal class");
+    }
+  }
+
+  class Dog extends Animal{
+    makeSound(){
+      return "woof!"
+    }
+  }
+  class Cat extends Animal{
+    makeSound(){
+      return "Meow!"
+    }
+  }
+  class Bird extends Animal{
+    makeSound(){
+      return "Chirp!"
+    }
+  }
+  const dog = new Dog();
+  const cat = new Cat();
+  const bird = new Bird();
+
+  console.log("Dog:",dog.makeSound())
+  console.log("Cat:",cat.makeSound())
+  console.log("Bied:",bird.makeSound())
+</script>

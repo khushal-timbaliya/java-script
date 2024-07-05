@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class automobile {
+
+        constructor(name, year) {
+            this.name = name;
+            this.year = year;
+        }
+        battery(){
+            console.log("battery compulsory "); 
+        }
+
+    }
+    class ola extends automobile{
+        ola(){
+            console.log(this.name+" s1 pro"); 
+        }
+    }
+    class tesla extends automobile{
+        tesla(){
+            console.log(this.name+" model 3 year " + this.year);
+        }
+    }
+    let obj = new ola("ola")
+    obj.battery()
+    obj.ola()
+    let obj1 = new tesla("tesla",2020)
+    obj1.battery()
+    obj1.tesla()
+</script>
