@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        display: none;
+    }
+</style>
+<body>
+    <center>
+        <h1></h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSocUw7qVb-0Mdg6qba3_ofun33Io-JVGkE_A&s" alt="">
+    </center>
+</body>
+</html>
+<script>
+    let index = 10
+    let stop = setInterval(()=>{
+        index--
+        document.querySelector("h1").innerHTML = index
+        if(index === 0){
+        document.querySelector("img").style.display = "block"
+        document.querySelector("h1").style.display = "none"
+        }
+    },1000)
+</script>

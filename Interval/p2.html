@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    nav{
+        display: flex;
+        justify-content: space-evenly;
+        background-color: blue;
+        color: white;
+        padding: 25px;
+    }
+    i{
+        font-size: 30px;
+    }
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="first">
+                <center>
+                    <i class="fa-solid fa-user"></i>
+                    <h1 id="a"></h1>
+                    <h3>Students Trained</h3>
+                </center>
+            </div>
+            <div class="second">
+                <center>
+                    <i class="fa-solid fa-user"></i>
+                    <h1 id="b"></h1>
+                    <h3>Approved Courses</h3>
+                </center>
+            </div>
+            <div class="third">
+                <center>
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <h1 id="c"></h1>
+                    <h3>Approved Courses</h3>
+                </center>
+            </div>
+            <div class="fourth">
+                <center>
+                    <i class="fa-solid fa-building"></i>
+                    <h1 id="d"></h1>
+                    <h3>Approved Courses</h3>
+                </center>
+            </div>
+            <div class="fifth">
+                <center>
+                    <i class="fa-solid fa-file"></i>
+                    <h1 id="e"></h1>
+                    <h3>Approved Courses</h3>
+                </center>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>
+<script>
+    let index1 = 0
+    let stop = setInterval(()=>{
+        index1 ++
+        document.getElementById("a").innerHTML = index1
+        if(index1 === 37500){
+        clearInterval(stop1)
+        }
+    })
+    let index2 = 0
+    let stop2 = setInterval(()=>{
+        index2 ++
+        document.getElementById("b").innerHTML = index2
+        if(index2 === 50){
+        clearInterval(stop2)
+        }
+    })
+    let index3 = 0
+    let stop3 = setInterval(()=>{
+        index3 ++
+        document.getElementById("c").innerHTML = index3
+        if(index3 === 1500){
+        clearInterval(stop3)
+        }
+    })
+    let index4 = 0
+    let stop4 = setInterval(()=>{
+        index4 ++
+        document.getElementById("d").innerHTML = index4
+        if(index4 === 22){
+        clearInterval(stop4)
+        }
+    })
+    let index5 = 0
+    let stop5 = setInterval(()=>{
+        index5 ++
+        document.getElementById("e").innerHTML = index5
+        if(index5 === 8){
+        clearInterval(stop5)
+        }
+    })
+</script>
