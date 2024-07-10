@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    .main {
+        height: 100vh;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDsou-9Yj0s2NTQ1pGx4zvMQj12BW1NUvgLA&s");
+        background-size: 100% 100%;
+    }
+
+    span {
+        font-size: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: rgb(214, 226, 235);
+        padding: 30px;
+        border-radius: 20px;
+    }
+
+    .time {
+        padding-top: 300px;
+        padding-left: 50px;
+    }
+
+    img {
+        display: none;
+        height: 99%;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="time">
+            <center>
+                <span id="hour"></span>
+                <span id="min"></span>
+                <span id="sec"></span>
+            </center>
+        </div>
+    </div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu0TPuJyTh7Hzv8TbGLvpRxrZf-KWPvYd8yw&s" alt="">
+</body>
+
+</html>
+<script>
+    let hours = 11;
+    let stop = setInterval(() => {
+        hours++
+        document.getElementById("hour").innerHTML = hours
+
+        if (hours === 12) {
+            clearInterval(stop)
+            document.querySelector("img").style.display = "block"
+            document.querySelector("div").style.display = "none"
+        }
+
+    }, 10000)
+    document.getElementById("hour").innerHTML = hours
+
+
+
+
+    let mins = 59;
+    let stop1 = setInterval(() => {
+        mins++
+        document.getElementById("min").innerHTML = mins
+
+        if (mins === 60) {
+            clearInterval(stop1)
+            document.getElementById("min").innerHTML = "00"
+
+        }
+
+    }, 10000)
+    document.getElementById("min").innerHTML = mins
+
+
+    let secs = 50;
+    let stop2 = setInterval(() => {
+        secs++
+        document.getElementById("sec").innerHTML = secs
+        if (secs === 60) {
+            clearInterval(stop2)
+            document.getElementById("sec").innerHTML = "00"
+
+        }
+    }, 1000)
+    document.getElementById("sec").innerHTML = secs
+
+</script>
