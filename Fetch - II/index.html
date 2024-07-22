@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+        .img{
+            height: 200px;
+        }
+
+        .head{
+            font-size: 20px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .a2{
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+<body>
+    <div id="main"></div>
+</body>
+</html>
+
+<script>
+    fetch("https://fakestoreapi.com/products")
+    .then((res)=>{
+        return res.json()
+    }).then((json)=>{
+        console.log(json)
+        displaydata(json)
+    }).catch((err)=>{
+        console.log(err)
+    })
+
+    function displaydata(json){
+        json.map((el)=>{
+
+            let div = document.createElement('div')
+
+            let heading = document.createElement("h1")
+            heading.setAttribute("class" , "head")
+            heading.innerHTML = el.title
+
+            let pic = document.createElement("img")
+            pic.setAttribute("src" , el.image)
+            pic.setAttribute("class" , "img")
+
+            let price = document.createElement("a")
+            price.innerHTML = "$" + el.price
+            price.setAttribute("class" , "a2")
+
+            div.append(heading , pic , price)
+            document.getElementById("main").append(div)
+
+        })
+    }
+</script>
