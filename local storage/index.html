@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .img {
+        height: 100px;
+    }
+
+    #main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .div1 {
+        width: 25%;
+        margin-top: 50px;
+    }
+
+    .text1{
+        color: #044804;
+        font-size: 25px;
+        text-transform: uppercase;
+    }
+
+    .button1{
+        height: 35px;
+        width: 50px;
+        border-radius: 5px;
+        background-color: red;
+        color: white;
+        border: transparent;
+        margin-top: 15px;
+    }
+    
+    .button2{
+        height: 35px;
+        width: 80px;
+        border-radius: 5px;
+        background-color: #044804;
+        color: white;
+        border: transparent;
+        margin-left: 15px;
+    }
+    .input{
+        height: 30px;
+        width: 330px;
+        border-radius: 5px;
+    }
+    .input1{
+        height: 30px;
+        width: 330px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+</style>
+
+<body>
+
+    <div id="main">
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    fetch("https://fakestoreapi.com/products")
+
+        .then((res) => {
+            return res.json()
+        }).then((json) => {
+            console.log(json)
+            displayData(json)
+        })
+
+
+
+
+    function displayData(json) {
+
+        json.map((el, index) => {
+
+            let div = document.createElement("div")
+            div.setAttribute("class", "div1")
+
+            let text = document.createElement("h3")
+            text.innerHTML = el.category;
+            text.setAttribute("class" , "text1")
+
+            let img = document.createElement("img")
+            img.setAttribute("src", el.image)
+            img.setAttribute("class", "img")
+
+            let btn1 = document.createElement("button")
+            btn1.innerHTML = "Edit"
+            btn1.setAttribute("class", "button1")
+
+
+            let btn2 = document.createElement("button")
+            btn2.innerHTML = "Update"
+            btn2.setAttribute("class", "button2")
+
+            let price = document.createElement("p")
+            price.innerHTML = "₹" + el.price
+
+            price.className = "price"
+
+            let input = document.createElement("input")
+            input.className = "input"
+            input.setAttribute("placeholder" , "Enter Price to update")
+
+            let input1 = document.createElement("input")
+            input1.className = "input1"
+            input1.setAttribute("placeholder" , "Enter category to change")
+
+            div.append(text, img, price, input, input1, btn1, btn2)
+            document.getElementById("main").append(div)
+
+
+
+            btn1.addEventListener("click", function (e) {
+                input.value = el.price;
+                input1.value = el.category;
+
+                localStorage.setItem("Edit_value", JSON.stringify(el.price))
+                localStorage.setItem("Category", JSON.stringify(el.category))
+            })
+
+            btn2.addEventListener("click", function (e) {
+                let newPrice = input.value
+                let newCategory = input1.value
+
+                price.innerHTML =" ₹" + newPrice
+                text.innerHTML = newCategory
+
+                localStorage.setItem("Updated_value", JSON.stringify(newPrice))
+                localStorage.setItem("Category", JSON.stringify(newCategory))
+
+            })
+        })
+
+    }
+
+
+
+</script>
