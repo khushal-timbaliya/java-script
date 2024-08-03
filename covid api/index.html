@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>.
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main1">
+
+        <input type="text" id="input" placeholder="ENTER STATE FOR VIEW CORONA DETAILS"><br><br><br>
+        <button onclick="search() " class="btn">View</button>
+        <div id="m1"></div>
+        <div id="main"></div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function search() {
+
+        let value = document.getElementById("input").value
+
+        fetch(`https://data.covid19india.org/v4/min/data.min.json`)
+            .then((res) => {
+                return res.json()
+            }).then((json) => {
+                console.clear()
+                console.log(json)
+                displayData(json , value)
+            }).catch(err => {
+                console.log("Invalid");
+            })
+
+    }   
+
+    function display() {
+            let div = document.createElement("div")
+            document.getElementById("m1").innerHTML= ""
+
+            let value = document.getElementById("input").value
+            
+            let text = document.createElement("p")
+            text.innerHTML = "DATA OF " + value
+            text.setAttribute("class" , "p2")
+
+            div.append(text)
+            document.getElementById("m1").append(div)
+
+    }
+
+    function displayData(json , value){
+
+        let div = document.createElement("div")
+        document.getElementById("main").innerHTML = ""
+
+        display()
+
+        let text = document.createElement("p")
+        text.innerHTML = "TESTED : " +  json[value].delta.tested
+                + "<br>vaccinated1 : " + json[value].delta.vaccinated1 
+                + "<br>vaccinated2 : " + json[value].delta.vaccinated2 
+        text.setAttribute("class" , "p2")
+
+        let text1 = document.createElement("p")
+        text1.innerHTML = "population : " + json[value].meta.population 
+        text1.setAttribute("class" , "p2")
+
+
+        let text3 = document.createElement("p")
+        text3.innerHTML ="confirmed : " + json[value].delta21_14.confirmed 
+        text3.setAttribute("class" , "p2")
+
+        let text4 = document.createElement("p")
+        text4.innerHTML ="confirmed : " + json[value].delta7.confirmed
+        text4.setAttribute("class" , "p2")
+
+
+        let text2 = document.createElement("p")
+        text2.innerHTML ="vaccinated1 : " + json[value].total.vaccinated1 
+                + "<br>vaccinated2 : " + json[value].total.vaccinated2 
+        text2.setAttribute("class" , "p2")
+
+        div.append(text , text1 , text3 , text4 , text2)
+
+        document.getElementById("main").append(div)
+
+    }
+
+</script>

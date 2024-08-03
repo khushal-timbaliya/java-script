@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stsyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <center>
+        <div id="main">
+            <div>
+                <input type="text" id="a1" placeholder="enter city name">
+            <button id="a2" onclick="serchbtn()">search</button>
+            </div>
+        </div>
+    </center>
+    
+</body>
+
+</html>
+<script>
+    function serchbtn() {
+        let data = document.getElementById("a1").value
+
+        fetch(`https://api.weatherapi.com/v1/current.json?key=8bf3ecfb191c49a2ad392045243007&q=${data}`)
+            .then((res) => {
+                return res.json()
+            }).then((json) => {
+                console.log(json)
+                displayData(json)
+
+            })
+    }
+
+    function displayData(data) {
+
+        let div = document.createElement("div")
+        div.className = "div1"
+
+        let p = document.createElement("p")
+        p.innerHTML = data.location.name
+        p.className = "city"
+
+
+        let p1 = document.createElement("p")
+        p1.innerHTML = "Temperature :" + data.current.temp_c + "°C"
+        p1.className = "temp"
+
+
+        let p3 = document.createElement("p")
+        p3.innerHTML = "wind speed :" + data.current.wind_kph
+        p3.className = "wind"
+
+        let img1 = document.createElement("img")
+        img1.setAttribute("src", data.current.condition.icon)
+        img1.className = "img1"
+
+        let removebtn = document.createElement("button")
+        removebtn.className = "delete"
+        removebtn.textContent = "delete data"
+        removebtn.addEventListener("click", function () {
+            main.removeChild(div)
+        })
+
+        div.append(p, p1, p3, img1, removebtn)
+        document.getElementById("main").append(div)
+
+    }
+
+
+</script>
