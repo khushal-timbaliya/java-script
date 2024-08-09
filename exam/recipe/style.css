@@ -1,0 +1,103 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #395144;
+}
+#mainDiv{
+    width: 90%;
+    margin-left: 5%;
+}
+
+.item_div{
+    height: auto;
+    width: 22%;
+    margin-top: 50px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15px;
+    color: #395144;
+    background-color: #F0EBCE;
+
+}
+
+.item_div img{
+    height: 300px;
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
+.btn1{
+    height: 45px;
+    width: 40%;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #377D71;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    transition-duration: 0.5s;
+}
+
+.btn1:hover{
+    background-color: transparent;
+    border: 1px solid #377D71;
+    color: #377D71;
+}
+.btn3{
+    height: 45px;
+    width: 40%;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #DD5353;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    transition-duration: 0.5s;
+}
+
+.btn3:hover{
+    background-color: transparent;
+    border: 1px solid #DD5353;
+    color: #DD5353;
+}
+
+.input_box{
+    width: 80%;
+    height: 35px;
+    border-radius: 10px;
+    margin-top: 15px;
+    display: none;
+    margin-left: 10%;
+    color: #395144;
+
+    border: 1px solid black;
+}
+
+.btn2{
+    height: 45px;
+    width: 40%;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #045762;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    transition-duration: 0.5s;
+}
+
+.btn2:hover{
+    background-color: transparent;
+    border: 1px solid #045762;
+    color: #045762;
+}
+
+#recipe-container{
+    display: none;
+    height: 100px;
+    width: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}

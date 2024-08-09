@@ -1,0 +1,125 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    scroll-behavior: smooth; 
+}
+
+.main_div{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(pngtree-employees-with-managers-at-work-or-management-team-on-a-circle-image_13300260.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.taskDiv{
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+.input1{
+    height: 35px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.addButton{
+    height: 35px;
+    width: 100%;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.viewTask{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.storeDiv{
+    height: auto;
+    width: 23%;
+    border: 1px solid black;
+    box-sizing: 10px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.edit_input1{
+    height: 35px;
+    border-radius: 5px;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 15px;
+    display: none;
+}
+
+.image1{
+    height: 200px;
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+.text4{
+    margin-left: 2.5%;
+}
+
+.editButton{
+    height: 35px;
+    width: 100px;
+    font-size: 16px;
+    border-radius: 15px;
+    background-color: blue;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    transition-duration: 0.5s;
+}
+
+.editButton:hover{
+    background-color: transparent;
+    border: 1px solid blue;
+    color: blue;
+}
+
+.updateButton{
+    height: 35px;
+    width: 100px;
+    font-size: 16px;
+    border-radius: 15px;
+    background-color: green;
+    color: white;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    transition-duration: 0.5s;
+}
+
+.updateButton:hover{
+    background-color: transparent;
+    border: 1px solid green;
+    color: green;
+}
+
+.deleteButton{
+    height: 35px;
+    width: 100px;
+    font-size: 16px;
+    border-radius: 15px;
+    background-color: red;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    transition-duration: 0.5s;
+}
+
+.deleteButton:hover{
+    background-color: transparent;
+    border: 1px solid red;
+    color: red;
+}

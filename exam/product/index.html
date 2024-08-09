@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="div flex">
+
+        <div id="main" class="w-[80%]" style="background-color: #add7e5;">
+            
+            <header class="h-[70px] w-[100%] flex justify-between items-center">
+                <div class="img_div">
+                    <img class="h-[100px] ms-3" src="amazon-512.webp" alt="">
+                </div>
+
+                <div class="icon_div me-5 relative">
+                    <i class="fa-solid fa-cart-shopping text-[20px]"></i>
+                    <sup class="bg-white absolute py-2 px-1 rounded-[50%]" id="count">0</sup>
+                </div>
+            </header>
+
+        </div>
+
+        <div id="AddtoCart" class="cart w-[20%]" style="border-left: 10px solid white;">
+            
+            <div class="div h-[50px] flex justify-center items-center" style="background-color: #add7e5;">
+                <h1 class="text-2xl text-center">Your Cart Items</h1>
+            </div>
+
+            <div id="totalContainer">
+                <p>Total: ₹<span id="grandTotal">0</span></p>
+            </div>
+
+            <div id="mainCartDiv">
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script src="script.js"></script>
