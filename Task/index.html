@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    
+let numbers = [1, 2, 3, 4, 5];
+
+numbers.push(6);
+console.log("After push:", numbers); 
+
+let lastElement = numbers.pop();
+console.log("After pop:", numbers); 
+console.log("Popped element:", lastElement); 
+
+let slicedArray = numbers.slice(1, 4);
+console.log("After slice:", slicedArray); 
+
+numbers.splice(2, 1, 10, 11);
+console.log("After splice:", numbers); 
+
+let firstElement = numbers.shift();
+console.log("After shift:", numbers); 
+console.log("Shifted element:", firstElement); 
+
+numbers.unshift(0);
+console.log("After unshift:", numbers); 
+
+let mappedArray = numbers.map(x => x * 2);
+console.log("After map:", mappedArray); 
+
+let filteredArray = numbers.filter(x => x > 5);
+console.log("After filter:", filteredArray); 
+
+let sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+console.log("After reduce (sum):", sum); 
+
+numbers.sort((a, b) => a - b);
+console.log("After sort:", numbers); 
+
+numbers.reverse();
+console.log("After reverse:", numbers); 
+
+</script>
